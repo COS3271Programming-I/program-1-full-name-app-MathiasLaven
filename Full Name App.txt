@@ -1,0 +1,30 @@
+package my_project;
+import java.util.Scanner;
+
+public class MyClass {
+    static Scanner userinput = new Scanner(System.in);
+    public static void main(String[] args) {
+    	
+    	System.out.print("Please enter your first name: \n>>");
+    	String firstName = userinput.nextLine();
+    	System.out.print("Please enter your middle name: \n>>");
+    	String middleName = userinput.nextLine();
+    	System.out.print("Please enter your last name: \n>>");
+    	String lastName = userinput.nextLine();
+    	
+    	firstName = firstName.toLowerCase();
+    	firstName = (firstName.charAt(0) + "").toUpperCase() + firstName.substring(1);
+    	
+    	middleName = middleName.toLowerCase();
+    	middleName = (middleName.charAt(0) + "").toUpperCase() + middleName.substring(1);
+    	
+    	lastName = lastName.toLowerCase();
+    	lastName = (lastName.charAt(0) + "").toUpperCase() + lastName.substring(1);
+    	
+    	String fullName = String.join(" ", firstName, middleName, lastName);
+    	
+    	System.out.println("");
+    	System.out.println("Your full name is: \"" + fullName + "\"");
+    	
+    }
+}
